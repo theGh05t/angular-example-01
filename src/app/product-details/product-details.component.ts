@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { Product, products } from "../products";
 
-import { products } from "../products";
 
 @Component({
   selector: "app-product-details",
@@ -9,8 +9,10 @@ import { products } from "../products";
   styleUrls: ["./product-details.component.css"]
 })
 export class ProductDetailsComponent implements OnInit {
-  product;
-  constructor(private route: ActivatedRoute) {}
+  product:Product;
+  constructor(
+    private route: ActivatedRoute
+    ) {}
 
   ngOnInit() {
     // First get the product id from the current route.
